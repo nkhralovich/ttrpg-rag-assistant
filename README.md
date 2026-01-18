@@ -36,19 +36,6 @@
 - Python 3.11+
 - [Poetry](https://python-poetry.org/docs/#installation)
 
-## Setup
-
-```bash
-# Clone the repository
-git clone <repo-url>
-cd thesis-rag-morkborg
-
-# Install dependencies
-poetry install
-
-# Activate virtual environment
-poetry shell
-```
 
 ## Project Structure
 
