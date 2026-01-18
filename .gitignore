@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Data - PDFs and processed files
+data/raw/
+data/processed/
+*.pdf
+
+# Results and experiments
+results/
+*.db
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db

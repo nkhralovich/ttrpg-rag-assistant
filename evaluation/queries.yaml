@@ -1,0 +1,21 @@
+# data/evaluation/queries.yaml
+factual:
+  - id: qf001
+    query: "What does the Omen ability do?"
+    ground_truth: "Omens can be used to reroll any dice roll..."
+    source_page: 12
+    category: mechanics
+
+  - id: qf002
+    query: "How much damage does a zweihänder deal?"
+    ground_truth: "d10 damage, two-handed"
+    source_page: 34
+    category: equipment
+
+generative:
+  - id: qg001
+    query: "Create a random encounter for a flooded crypt"
+    evaluation_criteria:
+      - uses_monsters_from_book: true
+      - tone_appropriate: true
+    category: encounter
