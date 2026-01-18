@@ -5,7 +5,6 @@
 ### 1. Corpus & Baseline
 - Corpus assembly (core rulebook, what else?)
 - Create and annotate baseline queries
-- Definition of hallucination (rules misinterpretation, tonal drift, what else?)
 ### 2. RAG Implementation
 - PDF extraction
 - Chunking strategy
@@ -20,17 +19,17 @@
 - Techniques: citation enforcement, retrieval verification, fine-tuning, constrained decoding, self-consistency checking
 - Evaluation using baseline queries
 - Evaluate baseline queries towards vanilla LLM
-### 6. Writing 💅
+### 6. Writing
+- Explain domain-specific context
+- Describe domain-specific challenges
+- Definition of hallucination (rules misinterpretation, tonal drift, what else?)
+- How to measure hallucination / accuracy of response?
+- Try and explained techniques used in #5
+
 
 ## The research question
 
 "To what extent does retrieval-augmented generation reduce factual hallucinations in TTRPG rule-lookup tasks, and how do retrieval parameters (chunk size, top-k) affect this reduction?"
-
-## Project structure
-
-# Reducing Hallucinations in RPG Session Support Systems with RAG
-
-Master's thesis project exploring retrieval-augmented generation for TTRPG (Mörk Borg) session support.
 
 ## Requirements
 
@@ -55,7 +54,7 @@ poetry shell
 
 | Folder | Description |
 |--------|-------------|
-| `src/extraction/` | PDF processing |
+| `src/extraction/` | Processed data |
 | `src/chunking/` | Text splitting strategies |
 | `src/retrieval/` | Vector store, search |
 | `src/generation/` | LLM calls, prompts |
@@ -63,10 +62,7 @@ poetry shell
 | `notebooks/` | Exploration, experiments |
 | `data/raw/` | Source PDFs (not in repo) |
 | `data/processed/` | Extracted text, chunks |
-| `evaluation/` | Query sets, annotations |
-| `configs/` | Experiment parameters |
-| `results/` | Experiment outputs |
-| `tests/` | Unit tests |
+| `evaluation/` | Testing queries |
 
 ## Requirements
 
@@ -78,13 +74,16 @@ poetry shell
 
 ```
 # Clone the repository
-git clone <repo-url>
+git clone https://github.com/nkhralovich/ttrpg-rag-assistant.git
 cd ttrpg-rag-assistant
 
-# Install dependencies
+# Install deps
 poetry install
 
-# Activate virtual environment
+# Install shell plugin
+poetry self add poetry-plugin-shell
+
+# Activate venv
 poetry shell
 ```
 
@@ -93,8 +92,3 @@ poetry shell
 Place source PDFs in `data/raw/`.
 
 ## Running
-
-```
-poetry run jupyter notebook
-poetry run python src/script.py
-```
