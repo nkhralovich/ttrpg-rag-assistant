@@ -73,7 +73,7 @@ poetry shell
 ## Setup
 
 ```
-# Clone the repository
+# Clone the repo
 git clone https://github.com/nkhralovich/ttrpg-rag-assistant.git
 cd ttrpg-rag-assistant
 
